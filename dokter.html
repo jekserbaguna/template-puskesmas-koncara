@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegawai Puskesmas</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/svg+xml">
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .doctor-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+
+        .doctor-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #4CAF50;
+        }
+
+        .doctor-card h2 {
+            margin: 15px 0 0;
+            font-size: 1.2em;
+            color: #118a8a;
+        }
+
+        .doctor-card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0; /* Sesuaikan padding footer */
+            background-color: #118a8a;
+            color: white;
+            width: 100%;
+        }
+
+        footer .container {
+            max-width: 1200px; /* Pastikan lebar footer sama dengan header */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- - #Header -->
+
+    <header class="header" data-header>
+        <div class="container">
+    
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.png" width="136" height="46" alt="Puskesmas Koncara">
+          </a>
+    
+          <nav class="navbar" data-navbar>
+    
+            <div class="navbar-top">
+    
+              <a href="#" class="logo">
+                <img src="./assets/images/logo.png" width="136" height="46" alt="Puskesmas Koncara">
+              </a>
+    
+    
+              <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+              </button>
+    
+            </div>
+    
+            <ul class="navbar-list">
+
+              <li class="navbar-item">
+                <a href="index.html" class="navbar-link title-md">Beranda</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="dokter.html" class="navbar-link title-md">Pegawai</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="jadwal.html" class="navbar-link title-md">Jadwal</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="tarif.html" class="navbar-link title-md">Tarif</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="kontak.html" class="navbar-link title-md">Kontak</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="dokumentasi.html" class="navbar-link title-md">Dokumentasi</a>
+              </li>
+    
+    
+            </ul>
+    
+          </ul>
+
+          <ul class="social-list">
+  
+            <li>
+              <a href="https://wa.me/6281311212633" class="social-link">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="https://www.facebook.com/puskesmaskoncara?mibextid=LQQJ4d&mibextid=LQQJ4d" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="https://www.instagram.com/puskesmaskoncara/profilecard/?igsh=dWtlZ2p3eXJ4YXRq" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="https://youtube.com/@puskesmaskoncara3590?si=jYYqXTmYyaDanB9_" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+  
+          </ul>
+    
+          </nav>
+    
+          <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+    
+          <a href="https://wa.me/6281311212633" class="btn has-before title-md">Pengaduan</a>
+    
+          <div class="overlay" data-nav-toggler data-overlay></div>
+    
+        </div>
+      </header>
+    
+      <main>
+        
+  <!-- - #Foto Pegawai -->
+
+    <div class="container">
+        <h1>Pegawai Puskesmas Koncara</h1>
+        <div class="image-container">
+            <img src="assets/images/struktur.png" alt="Struktur Organisasi" class="organization-structure">
+        </div>
+        <div class="image-container">
+            <img src="assets/images/fotbar1.JPG" alt="Struktur Organisasi" class="organization-structure">
+        </div>
+
+        <div class="staff-grid">
+            <!-- Kepala Puskesmas -->
+            <div class="doctor-card">
+                <img src="assets/images/kepala.png" alt="Kepala Puskesmas">
+                <h2>Hj. N Iot Hermawati, SST., Bdn</h2>
+                <p>Kepala Puskesmas</p>
+            </div>
+
+            <!-- Kepala Bagian Tata Usaha -->
+            <div class="doctor-card">
+                <img src="assets/images/tata.png" alt="Kepala Bagian Tata Usaha">
+                <h2>Rizal Yusrizal, AMKL</h2>
+                <p>Kepala Bagian Tata Usaha</p>
+            </div>
+
+            <!-- Dokter Umum -->
+            <div class="doctor-card">
+                <img src="assets/images/dokum1.jpg" alt="Dokter Umum">
+                <h2>dr. Dwi Nurkomaria</h2>
+                <p>Dokter Umum</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/dokum2.jpg" alt="Dokter Umum">
+                <h2>dr. Rein Firstiana K.</h2>
+                <p>Dokter Umum</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/dr.Rd Winda Hermawati.JPG" alt="Dokter Umum">
+                <h2>dr.Rd Winda Hermawati</h2>
+                <p>Dokter Umum</p>
+            </div>
+
+            <!-- Dokter Gigi -->
+            <div class="doctor-card">
+                <img src="assets/images/dokgi1.jpg" alt="Dokter Gigi">
+                <h2>drg. Ayu Abharina Pratiwi</h2>
+                <p>Dokter Gigi</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/dokgi2.jpg" alt="Dokter Gigi Dr. Winda Sari">
+                <h2>drg. Irene Lamria P</h2>
+                <p>Dokter Gigi</p>
+            </div>
+
+            <!-- Perawat Gigi -->
+            <div class="doctor-card">
+                <img src="assets/images/pegi1.jpg" alt="Perawat Gigi">
+                <h2>Yunisa Rosalina, S.Tr.Kes</h2>
+                <p>Terapis Gigi dan Mulut</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/pegi2.jpg" alt="Perawat Gigi">
+                <h2>Dila Hilalia Sa'adah, S.Tr.Kes</h2>
+                <p>Terapis Gigi dan Mulut</p>
+            </div>
+
+            <!-- Nutrisionisme -->
+            <div class="doctor-card">
+                <img src="assets/images/nutri1.jpg" alt="Nutrisionisme">
+                <h2>Fairus Oktaviany, S.Gz</h2>
+                <p>Nutrisionis</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/nutri2.jpg" alt="Nutrisionisme">
+                <h2>Rania Hakiki, A.Md.Gz</h2>
+                <p>Nutrisionis</p>
+            </div>
+
+            <!-- Apoteker -->
+            <div class="doctor-card">
+                <img src="assets/images/apoteker1.jpg" alt="Apoteker">
+                <h2>Luthfina Maulida, S.Farm.,Apt</h2>
+                <p>Apoteker</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/asisapoteker.jpg" alt="Asisten Apoteker">
+                <h2>Ayunda Dwi Sulistya, A.Md.Farm.</h2>
+                <p>Asisten Apoteker</p>
+            </div>
+
+            <!-- Perawat -->
+            <div class="doctor-card">
+                <img src="assets/images/perawat1.jpg" alt="Perawat">
+                <h2>Aldi Maulana, A.Md.Kep</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/perawat2.jpg" alt="Perawat">
+                <h2>Fitri Lenny Rahayu, Amd.Kep</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/perawat3.jpg" alt="Perawat">
+                <h2>Fitri Susanti, Amd.Kep</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/perawat4.jpg" alt="Perawat">
+                <h2>Ira Nadhirah Aspia, Amd.Kep.SKM</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/perawat5.jpg" alt="Perawat">
+                <h2>Lia Maria Ihsana, AMK</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Lusiana Nurul Ummah, Amd.Kep.JPG" alt="Perawat lusi">
+                <h2>Lusiana Nurul Ummah, Amd.Kep</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Meniarty, AMK.JPG" alt="Perawat meni">
+                <h2>Meniarty, AMK</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Muhamad Ridwan, Amd.Kep.JPG" alt="Perawat Ridwan">
+                <h2>Muhamad Ridwan, Amd.Kep</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Rany Kartikasari, Amd.Kep.JPG" alt="Perawat Iwan">
+                <h2>Rany Kartikasari, Amd.Kep</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Sislia Salim, Amd.Kep.JPG" alt="Perawat Jaya">
+                <h2>Sislia Salim, Amd.Kep</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Widianingsih, AMK.JPG" alt="Perawat Kiki">
+                <h2>Widianingsih, AMK</h2>
+                <p>Perawat</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Yulianti, S.Kep.,Ners.JPG" alt="Perawat Lestari">
+                <h2>Yulianti, S.Kep.,Ners</h2>
+                <p>Perawat</p>
+            </div>
+
+            <!-- Bidan -->
+            <div class="doctor-card">
+                <img src="assets/images/Ade Suhayati, AM.Keb.JPG" alt="Bidan Melati">
+                <h2>Ade Suhayati, AM.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Asry Yanti, S.Tr.Keb, Bdn.JPG" alt="Bidan Nia">
+                <h2>Asry Yanti, S.Tr.Keb, Bdn</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Erlina Pratiwi, Am.Keb.JPG" alt="Bidan Oki">
+                <h2>Erlina Pratiwi, Am.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Fitriani Rosmawati, Amd.Keb.JPG" alt="Bidan Putri">
+                <h2>Fitriani Rosmawati, Amd.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Futri Dwi Lestari, Am.Keb.JPG" alt="Bidan Rani">
+                <h2>Futri Dwi Lestari, Am.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Ida Widiyaningsih, Amd.Keb.JPG" alt="Bidan Sari">
+                <h2>Ida Widiyaningsih, Amd.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Irena Endang Widuri, Am.Keb.JPG" alt="Bidan Tika">
+                <h2>Irena Endang Widuri, Am.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Marina, A.Md.Keb.JPG" alt="Bidan Ula">
+                <h2>Marina, A.Md.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Mutiara Srie PR, SST.JPG" alt="Bidan Vina">
+                <h2>Mutiara Srie PR, SST</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/yunitria.jpg" alt="Bidan Wati">
+                <h2>Puput Yunitria Astuti, AM.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Riska Tresna Rahayu, Amd.Keb.JPG" alt="Bidan Xena">
+                <h2>Riska Tresna Rahayu, Amd.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Risty Nurdianty, Am.Keb.JPG" alt="Bidan Yani">
+                <h2>Risty Nurdianty, Am.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Suhartini, AM.Keb, SKM.JPG" alt="Bidan Zahra">
+                <h2>Suhartini, AM.Keb, SKM</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Tria Anggraeni, A.Md.Keb.JPG" alt="Bidan Zahra">
+                <h2>Tria Anggraeni, A.Md.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Yunda Dwi Shinta, Amd.Keb.JPG" alt="Bidan Zahra">
+                <h2>Yunda Dwi Shinta, Amd.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Yuyun Yuniarsih, Am.Keb.JPG" alt="Bidan Zahra">
+                <h2>Yuyun Yuniarsih, Am.Keb</h2>
+                <p>Bidan</p>
+            </div>
+            
+            <!-- Spesialis Lain -->
+            <div class="doctor-card">
+                <img src="assets/images/Mufarrohah Fawzyati, A.Md.JPG" alt="Spesialis 1">
+                <h2>Mufarrohah Fawzyati, <A class="Md"></A></h2>
+                <p>Perekam Medis</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Ina Herlina, A.Md.AK.JPG" alt="Spesialis 2">
+                <h2>Ina Herlina, A.Md.AK</h2>
+                <p>Pranata Laboratorium</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Fitria Ratnawulansari,A.Md.KL.JPG" alt="Spesialis 3">
+                <h2>Fitria Ratnawulansari,A.Md.KL</h2>
+                <p>Sanitarian</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Adria Safitri, SKM.JPG" alt="Spesialis 4">
+                <h2>Adria Safitri, SKM</h2>
+                <p>Epidemiolog</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Dety Novianti, S.Ak.JPG" alt="Spesialis 4">
+                <h2>Dety Nofianty, S.Ak</h2>
+                <p>Akuntansi/Keuangan</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Alfisahri.JPG" alt="Spesialis 5">
+                <h2>Alfisahri</h2>
+                <p>Petugas Pendaftaran</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Yayat Abadi.JPG" alt="Spesialis 6">
+                <h2>Yayat Abadi</h2>
+                <p>Driver Ambulance</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Iman Rukiman.JPG" alt="Spesialis 7">
+                <h2>Iman Rukiman</h2>
+                <p>Penjaga Malam</p>
+            </div>
+            <div class="doctor-card">
+                <img src="assets/images/Pani Setianus.JPG" alt="Spesialis 8">
+                <h2>Pani Setianus</h2>
+                <p>Petugas Kebersihan</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+  <!-- - #FOOTER -->
+
+<footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+    <div class="container">
+
+      <div class="section footer-top">
+
+        <div class="footer-brand" data-reveal="bottom">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="136" height="46" loading="lazy" alt="Puskesmas Koncara">
+          </a>
+
+          <ul class="contact-list has-after">
+
+            <li class="contact-item">
+
+              <div class="item-icon">
+                <ion-icon name="mail-open-outline"></ion-icon>
+              </div>
+
+              <div>
+                <p>
+                  Email : <a href="pkmkoncara@gmail.com" class="contact-link">pkmkoncara@gmail.com</a>
+                </p>
+
+                <p>
+                  Instagram: <a href=" https://www.instagram.com/puskesmaskoncara/profilecard/?igsh=dWtlZ2p3eXJ4YXRq" class="contact-link">puskesmaskoncara</a>
+                </p>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="item-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <div>
+                <p>
+                  Whatsapp : <a href="Whatsapp:https://wa.me/6281311212633" class="contact-link">0813-1121-2633</a>
+                </p>
+
+                <p>
+                  Facebook : <a href="Facebook:Puskesmas Koncara" class="contact-link">puskesmas koncara</a>
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+    
+        <p class="text copyright">
+          &copy; Sistem Telekomunikasi | UPI PWK
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/puskesmaskoncara?mibextid=LQQJ4d&mibextid=LQQJ4d" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/puskesmaskoncara/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/@puskesmaskoncara3590" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/6281311212633" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+            <p>
+    
+          </li>
+
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

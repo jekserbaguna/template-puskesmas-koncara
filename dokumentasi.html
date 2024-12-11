@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/svg+xml">
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #118a8a;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto; /* Menjaga proporsi gambar */
+            border-radius: 8px;
+            display: block;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover .caption {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #2b38b3;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+  <!-- - #Header -->
+
+<body>
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.png" width="136" height="46" alt="Puskesmas Koncara">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.png" width="136" height="46" alt="Puskesmas Koncara">
+          </a>
+
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link title-md">Beranda</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="dokter.html" class="navbar-link title-md">Pegawai</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="jadwal.html" class="navbar-link title-md">Jadwal</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="tarif.html" class="navbar-link title-md">Tarif</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="kontak.html" class="navbar-link title-md">Kontak</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="dokumentasi.html" class="navbar-link title-md">Dokumentasi</a>
+          </li>
+
+
+        </ul>
+
+      </ul>
+
+      <ul class="social-list">
+
+        <li>
+          <a href="https://wa.me/6281311212633" class="social-link">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.facebook.com/puskesmaskoncara?mibextid=LQQJ4d&mibextid=LQQJ4d" class="social-link">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/puskesmaskoncara/profilecard/?igsh=dWtlZ2p3eXJ4YXRq" class="social-link">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://youtube.com/@puskesmaskoncara3590?si=jYYqXTmYyaDanB9_" class="social-link">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+        </li>
+
+      </ul>
+      
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="https://wa.me/6281311212633" class="btn has-before title-md">Pengaduan</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <!-- - #Galeri Foto -->
+    <main>
+        <div class="content-container">
+            <h2>Galeri Foto</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="assets/images/Pndftrn.JPG" alt="Foto 1">
+                    <div class="caption">Pegawai Pendaftaran</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/amp.png" alt="Foto 2">
+                    <div class="caption">Pertemuan AMP RSBA, 28-29, November 2024</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/Gigi.JPG" alt="Foto 3">
+                    <div class="caption">Pemeriksaan Gigi</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/haji.png" alt="Foto 4">
+                    <div class="caption">Pemeriksaan Jemaah Haji dan Skrining</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/oralit.png" alt="Foto 5">
+                    <div class="caption">Pemantauan Minum Oralit dan Zinc Kelurahan Nagrikaler</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/bias.png" alt="Foto 6">
+                    <div class="caption">Kegiatan BIAS Dt Td SD Plus Al-Muhajirin</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/piket.png" alt="Foto 7">
+                    <div class="caption">Piket Tim Kesehatan ndan Ambulance di Depan Masjid Agung</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/pemeriksaanjantik.png" alt="Foto 8">
+                    <div class="caption">PE dan Pemeriksaan Jentik Pada Kasus Demam Dengue di RW 06 Nagrikaler</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/kunjungan.png" alt="Foto 9">
+                    <div class="caption">Kunjungan Rumah BBLR Kelurahan Purwamekar</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/skrining.png" alt="Foto 10">
+                    <div class="caption">Skrining GIF, PTM, Lansia dan Jiwa RW 03 Nagrikaler</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+      <!-- - #FOOTER -->
+
+    <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+      <div class="container">
+  
+        <div class="section footer-top">
+  
+          <div class="footer-brand" data-reveal="bottom">
+  
+            <a href="#" class="logo">
+              <img src="./assets/images/logo.svg" width="136" height="46" loading="lazy" alt="Puskesmas Koncara">
+            </a>
+  
+            <ul class="contact-list has-after">
+  
+              <li class="contact-item">
+  
+                <div class="item-icon">
+                  <ion-icon name="mail-open-outline"></ion-icon>
+                </div>
+  
+                <div>
+                  <p>
+                    Email : <a href="pkmkoncara@gmail.com" class="contact-link">pkmkoncara@gmail.com</a>
+                  </p>
+  
+                  <p>
+                    Instagram: <a href=" https://www.instagram.com/puskesmaskoncara/profilecard/?igsh=dWtlZ2p3eXJ4YXRq" class="contact-link">puskesmaskoncara</a>
+                  </p>
+                </div>
+  
+              </li>
+  
+              <li class="contact-item">
+  
+                <div class="item-icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+  
+                <div>
+                  <p>
+                    Whatsapp : <a href="Whatsapp:https://wa.me/6281311212633" class="contact-link">0813-1121-2633</a>
+                  </p>
+  
+                  <p>
+                    Facebook : <a href="Facebook:Puskesmas Koncara" class="contact-link">puskesmas koncara</a>
+                  </p>
+                </div>
+  
+              </li>
+  
+            </ul>
+  
+          </div>
+        </div>
+  
+        <div class="footer-bottom">
+      
+          <p class="text copyright">
+            &copy; Sistem Telekomunikasi | UPI PWK
+          </p>
+  
+          <ul class="social-list">
+  
+            <li>
+              <a href="https://www.facebook.com/puskesmaskoncara?mibextid=LQQJ4d&mibextid=LQQJ4d" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="https://www.instagram.com/puskesmaskoncara/" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="https://www.youtube.com/@puskesmaskoncara3590" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+  
+            <li>
+              <a href="https://wa.me/6281311212633" class="social-link">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </a>
+              <p>
+      
+            </li>
+  
+  
+          </ul>
+  
+        </div>
+  
+      </div>
+    </footer>
+  
+  
+  
+  
+  
+    <!-- 
+      - #BACK TO TOP
+    -->
+  
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+      <ion-icon name="chevron-up"></ion-icon>
+    </a>
+  
+  
+  
+  
+  
+    <!-- 
+      - custom js link
+    -->
+    <script src="./assets/js/script.js"></script>
+  
+    <!-- 
+      - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  </body>
+  
+  </html>
